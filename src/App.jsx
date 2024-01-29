@@ -2,7 +2,7 @@
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import './App.css'
 // import RootLayout from './layout/RootLayout'
-import LandingPage from './pages/home/LandingPage'
+import LandingPage from './pages/landingpage/LandingPage'
 import RootLayout from './layout/RootLayout'
 import SalesPage from './pages/sales/SalesPage'
 
