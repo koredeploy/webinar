@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import logo from '../../assets/navlogo.png'
 import { TiThMenuOutline } from "react-icons/ti";
+import { IoCloseOutline } from "react-icons/io5";
 
 const Navbar = () => {
     const [show, setShow] = useState(false)
@@ -10,10 +11,10 @@ const Navbar = () => {
         <div className='flex justify-between'>
         <img src={logo} alt="" className='md:w-32 w-32' />
     
-        <button onClick={() => setShow(!show)}><TiThMenuOutline className='text-4xl md:hidden'/></button>
+        <button onClick={() => setShow(!show)}>{show ? <IoCloseOutline className='text-4xl md:hidden'/> :<TiThMenuOutline className='text-4xl md:hidden'/>}</button>
         </div>
 
-        <nav className={show ? "block transla" :"md:block hidden"}>
+        <nav className={show ? "block" :"md:block hidden"}>
             <ul className='pt-3 flex md:flex-row flex-col gap-10'>
                 <li><a href="" className='text-dark-emphasis text-black'>Home</a></li>
                 <li><a href="" className='text-dark-emphasis fs-5'>About</a></li>
