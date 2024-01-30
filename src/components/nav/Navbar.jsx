@@ -1,14 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from '../../assets/navlogo.png'
+import { TiThMenuOutline } from "react-icons/ti";
 
 const Navbar = () => {
+    const [show, setShow] = useState(false)
   return (
-    <div className='bg-light w-full py-4 position-fixed top-0 '>
-    <header className='w-full flex content-between items-center gap-10'>
-        <img src={logo} alt="" />
+    <div className=' bg-zinc-300 w-full py-4 fixed top-0 '>
+    <header className='px-8 flex md:row flex-col justify-between md:items-center gap-10'>
+        <div className='flex justify-between'>
+        <img src={logo} alt="" className='md:w-32 w-32' />
+    
+        <TiThMenuOutline className='text-4xl' onClick={() => setShow(!show)}/>
+        </div>
 
-        <nav>
-            <ul className='pt-3 flex gap-4'>
+        <nav className={show ? "block" : "sm:none"}>
+            <ul className='pt-3 flex md:flex-row flex-col gap-10'>
                 <li><a href="" className='text-dark-emphasis text-black'>Home</a></li>
                 <li><a href="" className='text-dark-emphasis fs-5'>About</a></li>
                 <li><a href="" className='text-dark-emphasis fs-5'>Speaker</a></li>

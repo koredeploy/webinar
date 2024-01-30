@@ -4,10 +4,10 @@ import Footer from "../components/footer/Footer";
 import { Outlet } from "react-router-dom";
 
 const RootLayout = () => {
-  return <div className="w-11/12 mx-auto">
+  return <div>
     <Navbar/>
     <Outlet/>
-    {/* <Footer/> */}
+    <Footer/>
   </div>;
 };
 

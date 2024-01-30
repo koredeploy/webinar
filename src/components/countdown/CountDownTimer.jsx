@@ -37,7 +37,7 @@ const CountDownTimer = () => {
   
   return (
     <div>
-       <h2 className="font-bold text-lg">Webinar starts in:</h2>
+       <h2 className="font-bold text-lg leading-10">Webinar starts in:</h2>
       <div className="flex flex-wrap content-center items-center gap-4">
         <div className="flex flex-col content-center items-center">
           <p className="border-2 border-black rounded py-5 px-6 text-lg font-semibold">
