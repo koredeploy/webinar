@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="bg-black py-6">
       <div className=" flex justify-between md:flex-row flex-col  gap-3 flex-wrap w-full py-7 lg:px-32 px-3">
-      <div className=" sm:w-72 lg:w-80 flex flex-col gap-1 items-start">
+      <div className=" lg:w-80 w-72 flex flex-col gap-1 items-start">
         <img src={logo} alt="" />
         <p className="text-gray-500 leading-6 py-7">
           Join Dr. Emily Johnson for an Exclusive Session on [Key Topic]. Don't
