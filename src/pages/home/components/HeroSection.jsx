@@ -1,9 +1,12 @@
 import React from "react";
+import CountDownTimer from "../../../components/countdown/CountDownTimer";
 
 const HeroSection = () => {
   return (
     <div className="">
-      <div>
+      Home
+  <CountDownTimer />
+      {/* <div>
         <h1 className="font-bold text-2xl">
           Elevate Your Skills in an Exclusive Webinar Experience
         </h1>
@@ -15,7 +18,7 @@ const HeroSection = () => {
       </div>
       <div>
         <img src="https://res.cloudinary.com/doejcrfso/image/upload/v1706530316/webinar-project/Vector_1_zc61tv.png" alt="" />
-      </div>
+      </div> */}
     </div>
   );
 };
