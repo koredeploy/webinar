@@ -4,10 +4,10 @@ import Footer from "../components/footer/Footer";
 import { Outlet } from "react-router-dom";
 
 const RootLayout = () => {
-  return <div>
-    <Navbar/>
+  return <div style={{backgroundColor: "#E9F7EE"}} className=" mx-auto">
+    {/* <Navbar/> */}
     <Outlet/>
-    <Footer/>
+    {/* <Footer/> */}
   </div>;
 };
 
