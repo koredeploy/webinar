@@ -1,0 +1,8 @@
+@use './scss/style.scss'; 
+
+$base-font: 'Nexa', san-serif;
+
+html{
+    font-family: $base-font;
+}
+

@@ -1,6 +1,6 @@
 
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
-import './App.css'
+import './App.scss'
 // import RootLayout from './layout/RootLayout'
 import LandingPage from './pages/landingpage/LandingPage'
 import RootLayout from './layout/RootLayout'
