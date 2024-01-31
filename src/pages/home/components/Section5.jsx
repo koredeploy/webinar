@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import WhiteBtn from '../../../components/button/register-btn/WhiteBtn'
 
 const Section5 = () => {

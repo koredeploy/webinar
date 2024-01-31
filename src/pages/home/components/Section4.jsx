@@ -1,5 +1,5 @@
-import React from 'react'
-import video from '../../../assets/images/Frame 1000002414.png'
+// import React from 'react'
+// import video from '../../../assets/images/Frame 1000002414.png'
 
 const Section4 = () => {
   return (

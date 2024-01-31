@@ -1,5 +1,5 @@
-import React from "react";
-import BlueBtn from "../../../components/button/register-btn/BlueBtn";
+// import React from "react";
+// import CountDownTimer from "../../../components/countdown/CountDownTimer";
 
 const HeroSection = () => {
   return (
@@ -13,10 +13,10 @@ const HeroSection = () => {
 
         </p>
 
-        <BlueBtn/>
+        {/* <BlueBtn/> */}
       </div>
-      <div className="flex justify-center md:justify-end">
-        <img className=" object-cover" src="https://res.cloudinary.com/doejcrfso/image/upload/v1706530316/webinar-project/Vector_1_zc61tv.png" alt="" />
+      <div>
+        <img src="https://res.cloudinary.com/doejcrfso/image/upload/v1706530316/webinar-project/Vector_1_zc61tv.png" alt="" />
       </div>
     </div>
   );
