@@ -1,8 +1,12 @@
 import React from 'react'
 
-const WhiteBtn = () => {
+// eslint-disable-next-line react/prop-types
+const WhiteBtn = ({setOpen}) => {
+  const showModal= ()=>{
+    setOpen(true)
+  }
   return (
-    <button style={{background: "#FFFFFF", boxShadow: "5px 5px black", width: "211px"}} className='text-black p-3 font-bold'>Register Now</button>
+    <button onClick={showModal} style={{background: "#FFFFFF", boxShadow: "5px 5px black", width: "211px"}} className='text-black p-3 font-bold'>Register Now</button>
   )
 }
 

@@ -7,17 +7,25 @@ import Section2 from '../home/components/Section2'
 import style from './landingpage.module.scss'
 import Section4 from '../home/components/Section4'
 import Section6 from '../home/components/Section6'
+import RegistrationModal from '../../components/modal/RegistrationModal'
+import { useState } from 'react'
+
 
 
 const LandingPage = () => {
+  const [value, setValue] = useState('')
+  const [open, setOpen] = useState(false);
+
+  // const [showModal, setShowModal] = useState()
   return (
-    <div >
-    <HeroSection />
+    <div style={{maxWidth:"1600px ", margin: "auto"}} >
+    <HeroSection setOpen={setOpen} open={open} />
     <Section2 />
-    <Section3/>
+    <Section3 setOpen={setOpen}/>
     <Section4/>
-    <Section5/>
+    <Section5 setOpen={setOpen}/>
     <Section6/>
+    <RegistrationModal value={value} open={open} setOpen={setOpen}/>
     </div>
   )
 }

@@ -1,10 +1,10 @@
 import BlueBtn from "../../../components/button/register-btn/BlueBtn";
 
-const Section3 = () => {
+const Section3 = ({setOpen}) => {
   return (
     <div className="w-11/12 mx-auto">
-      <div className=" grid grid-cols-1 md:grid-cols-2 gap-10  items-center py-10">
-        <div className="flex flex-col items-center md:items-start gap-4 text-center md:text-start">
+      <div className=" grid grid-cols-1 lg:grid-cols-2 gap-10  items-center py-10">
+        <div className="flex flex-col items-center lg:items-start gap-4 text-center lg:text-start">
           <h1 className="text-3xl font-bold ">Meet the Speaker</h1>
           <div className="w-full ">
           <p className=" leading-8 py-3 ">
@@ -24,9 +24,9 @@ const Section3 = () => {
             level of potential.
           </p>
           </div>
-          <BlueBtn/>
+          <BlueBtn setOpen={setOpen} />
         </div>
-        <div className=" flex justify-center md:justify-end py-15">
+        <div className=" flex justify-center lg:justify-end py-15">
           <img style={{border: "4px solid black", boxShadow: "10px 10px black", }}
             className="object-cover rounded-2xl  "
             src="https://res.cloudinary.com/doejcrfso/image/upload/v1706538784/webinar-project/people-practicing-social-integration-workspace_1_1_ts30q8.png"

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const CountDownTimer = () => {
+const CountDownTimerWhite = () => {
   const [seconds, setSeconds] = useState(0);
     const [minutes, setMinutes] = useState(0);
     const [hours, setHours] = useState(0);
@@ -37,27 +37,27 @@ const CountDownTimer = () => {
   return (
     <div className="py-3">
        <h2 className="font-bold text-lg py-3 text-center lg:text-start" >Webinar starts in:</h2>
-      <div className="flex flex-wrap items-center  lg:items-end gap-3 lg:gap-5">
+      <div className="flex flex-wrap items-center justify-center lg:justify-start  lg:items-end gap-3 lg:gap-5">
         <div className="flex flex-col content-center items-center">
-          <p  style={{border: "2px solid black"}} className=" rounded py-4 lg:py-5 px-4 lg:px-6 text-lg font-semibold">
+          <p  style={{border: "2px solid white"}} className=" rounded py-4 lg:py-5 px-4 lg:px-6 text-lg font-semibold">
             {days.toString().length == 2 ? `${days}` : `0${days}`}
           </p>{" "}
           <span className="py-3 text-base md:text-xl">Days </span>
         </div>
         <div className="flex flex-col content-center items-center">
-          <p style={{border: "2px solid black"}} className=" rounded py-4 lg:py-5 px-4 lg:px-6 text-lg font-semibold">
+          <p style={{border: "2px solid white"}} className=" rounded py-4 lg:py-5 px-4 lg:px-6 text-lg font-semibold">
             {hours.toString().length == 2 ? `${hours} `: `0${hours}`}
           </p>
           <span className="py-3 text-base md:text-xl">Hours </span>
         </div>
         <div className="flex flex-col content-center items-center">
-          <p style={{border: "2px solid black"}} className="rounded py-4 lg:py-5 px-4 lg:px-6 text-lg font-semibold">
+          <p style={{border: "2px solid white"}} className="rounded py-4 lg:py-5 px-4 lg:px-6 text-lg font-semibold">
             {minutes.toString().length == 2 ? `${minutes}` : `0${minutes}`}
           </p>
           <span className="py-3 text-base md:text-xl ">Minutes </span>
         </div>
         <div className="flex flex-col content-center items-center">
-          <p style={{border: "2px solid black"}} className=" border-2 rounded py-4 lg:py-5 px-4 lg:px-6 text-lg font-semibold">
+          <p style={{border: "2px solid white"}} className=" border-2 rounded py-4 lg:py-5 px-4 lg:px-6 text-lg font-semibold">
             {seconds.toString().length == 2 ? `${seconds}` : `0${seconds}`}
           </p>
           <span className="py-3 text-base md:text-xl">Seconds </span>
@@ -67,4 +67,4 @@ const CountDownTimer = () => {
   )
 }
 
-export default CountDownTimer
+export default CountDownTimerWhite
