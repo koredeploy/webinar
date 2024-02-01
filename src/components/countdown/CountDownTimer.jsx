@@ -1,47 +1,47 @@
-// import { useEffect, useState } from "react";
+// // import { useEffect, useState } from "react";
 
-// const CountDownTimer = ({timerStyle, heading}) => {
+// // const CountDownTimer = ({timerStyle, heading}) => {
 
-//   const [seconds, setSeconds] = useState(0);
-//     const [minutes, setMinutes] = useState(0);
-//     const [hours, setHours] = useState(0);
-//     const [days, setDays] = useState(0);
+// //   const [seconds, setSeconds] = useState(0);
+// //     const [minutes, setMinutes] = useState(0);
+// //     const [hours, setHours] = useState(0);
+// //     const [days, setDays] = useState(0);
 
-//     const getCurrentATime = () => {
-//       const deadline = "10:52 PM,February, 21, 2024";
+// //     const getCurrentATime = () => {
+// //       const deadline = "10:52 PM,February, 21, 2024";
 
-//       const date = Date.parse(deadline) - Date.now();
+// //       const date = Date.parse(deadline) - Date.now();
 
-//       setSeconds(Math.floor((date / 1000) % 60));
+// //       setSeconds(Math.floor((date / 1000) % 60));
 
-//       setMinutes(Math.floor((date / (1000 * 60)) % 60));
+// //       setMinutes(Math.floor((date / (1000 * 60)) % 60));
 
-//       setHours(Math.floor((date / (1000 * 60 * 60)) % 12));
+// //       setHours(Math.floor((date / (1000 * 60 * 60)) % 12));
 
-//       setDays(Math.floor(date / (1000 * 60 * 60 * 24)));
+// //       setDays(Math.floor(date / (1000 * 60 * 60 * 24)));
 
-//       if (date <= 0) {
-//         // console.log("Countdown completed");
-//         setSeconds(0)
-//         setMinutes(0)
-//         setHours(0)
-//         setDays(0)
-//       }
+// //       if (date <= 0) {
+// //         // console.log("Countdown completed");
+// //         setSeconds(0)
+// //         setMinutes(0)
+// //         setHours(0)
+// //         setDays(0)
+// //       }
 
-//     }
-//     useEffect(() => {
-//       setInterval(getCurrentATime, 1000);
+// //     }
+// //     useEffect(() => {
+// //       setInterval(getCurrentATime, 1000);
 
-//     }, []);
+// //     }, []);
 
-//   return (
+// //   return (
 
-//   )
-// }
+// //   )
+// // }
 
-// export default CountDownTimer
+// // export default CountDownTimer
 
-// new timer
+// // new timer
 
 import { useCallback } from "react";
 import { useEffect, useState } from "react";
@@ -49,8 +49,10 @@ import { useEffect, useState } from "react";
 // eslint-disable-next-line react/prop-types
 const CountDownTimer = ({ timerStyle, heading }) => {
     const calculateTimeRemaining = useCallback(() => {
-        const deadline = "10:52 PM,February, 3, 2024";
-        const date = Date.parse(deadline) - Date.now();
+        const deadline = new Date("2024-02-21T22:52:00Z"); // Updated format for better compatibility
+        const currentTime = new Date();
+
+        let date = deadline - currentTime;
 
         const days = Math.floor(date / (1000 * 60 * 60 * 24));
         const hours = Math.floor((date / (1000 * 60 * 60)) % 12);
