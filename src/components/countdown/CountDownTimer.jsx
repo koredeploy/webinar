@@ -40,7 +40,7 @@ const CountDownTimer = ({timerStyle, heading}) => {
   return (
     <div className="py-3  ">
        <h2 className={` ${heading} font-bold text-lg py-1 text-center lg:text-start`} >Webinar starts in:</h2>
-      <div className="flex flex-wrap justify-center  items-center  gap-4 lg:gap-5">
+      <div className="flex flex-wrap justify-center  xl:justify-start items-center  gap-4 lg:gap-5">
         <div className="flex flex-col content-center items-center">
           <p className={` ${timerStyle} w-[60px] h-[60px] lg:w-[89px] lg:h-[81px] text-center border-2 rounded-md pt-2 lg:py-5 px-1 lg:px-6 text-[32px] font-semibold`}>
             {days.toString().length == 2 ? `${days}` : `0${days}`}
