@@ -9,7 +9,7 @@ import Section4 from '../home/components/Section4'
 import Section6 from '../home/components/Section6'
 import RegistrationModal from '../../components/modal/RegistrationModal'
 import { useState } from 'react'
-import SuccessModal from '../../components/modal/SuccessModal'
+// import SuccessModal from '../../components/modal/SuccessModal'
 
 
 
@@ -26,7 +26,7 @@ const LandingPage = () => {
     <Section4/>
     <Section5 setOpen={setOpen}/>
     <Section6/>
-    <SuccessModal/>
+    {/* <SuccessModal/> */}
     <RegistrationModal value={value} open={open} setOpen={setOpen}/>
     </div>
   )

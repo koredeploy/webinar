@@ -12,6 +12,7 @@ const RootLayout = () => {
   return <div style={{backgroundColor: "#E9F7EE", }} >
     <Navbar setOpen={setOpen} open={open}/>
     <RegistrationModal value={value} setValue={setValue} open={open} setOpen={setOpen}/>
+    
     <Outlet/>
     <Footer open={open} setOpen={setOpen}/>
   </div>;
