@@ -7,7 +7,7 @@ const HeroSection = ({setOpen}) => {
   return (
     <div className=" grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-5 pt-14 lg:pt-24 pb-10 mt-16 w-11/12 mx-auto">
       <div className=" text-center md:text-left flex flex-col items-center lg:items-start ">
-        <p className="p-1 px-4 mb-3 bg-black rounded-3xl text-white">UIAB Webinar</p>
+        <p className=" hidden lg:block p-1 px-4 mb-3 bg-black rounded-3xl text-white">UIAB Webinar</p>
         <h1 className="font-bold  text-2xl md:text-[45px] lg:text-[53px] text-center lg:text-start  leading-10 md:leading-[79.52px] ">
           Elevate Your Skills in  an Exclusive Webinar Experience
         </h1>
