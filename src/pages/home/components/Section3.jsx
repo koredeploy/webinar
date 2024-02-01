@@ -3,11 +3,11 @@ import BlueBtn from "../../../components/button/register-btn/BlueBtn";
 const Section3 = ({setOpen}) => {
   return (
     <div className="w-11/12 mx-auto">
-      <div className=" grid grid-cols-1 lg:grid-cols-2 gap-10  items-center py-10">
+      <div className=" grid grid-cols-1 lg:grid-cols-2 gap-10  items-center py-14">
         <div className="flex flex-col items-center lg:items-start gap-4 text-center lg:text-start">
-          <h1 className="text-3xl font-bold ">Meet the Speaker</h1>
+          <h1 className="text-4xl font-bold leading-[60.2px] ">Meet the Speaker</h1>
           <div className="w-full ">
-          <p className=" leading-8 py-3 ">
+          <p className=" leading-[40px] py-3 ">
             I am a seasoned business consultant and the driving force behind
             TechStudio Academy—a thriving tech education hub in Lagos, Nigeria.
             With a proven track record, our unique approach combines industry

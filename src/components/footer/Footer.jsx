@@ -10,7 +10,7 @@ const Footer = ({setOpen}) => {
       <div className=" grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-5 lg:gap-2 w-11/12 mx-auto py-7 text-center lg:text-left  ">
       <div className="  flex flex-col gap-1 items-center lg:items-start">
         <img src="https://res.cloudinary.com/doejcrfso/image/upload/v1706697604/webinar-project/Webinar_1_gcx5j2.png" alt="" />
-        <p className="text-white  leading-6 py-7 w-full md:w-2/4 lg:w-3/5">
+        <p className="text-white  leading-8 py-7 w-full md:w-2/4 lg:w-3/5">
           Join Dr. Emily Johnson for an Exclusive Session on [Key Topic]. Don't
           miss this opportunity to gain actionable knowledge,
         </p>
