@@ -56,7 +56,7 @@ const CountDownTimer = ({ timerStyle, heading }) => {
   const [days, setDays] = useState(0);
 
   const getCurrentATime = () => {
-    const deadline = "10:52 PM,February, 21, 2024";
+    const deadline = "10:52 PM,February, 3, 2024";
     const date = Date.parse(deadline) - Date.now();
 
     setSeconds(Math.floor((date / 1000) % 60));
