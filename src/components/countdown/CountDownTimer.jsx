@@ -43,25 +43,29 @@ const CountDownTimer = ({timerStyle, heading}) => {
       <div className="flex flex-wrap justify-center  xl:justify-start items-center  gap-4 lg:gap-5">
         <div className="flex flex-col content-center items-center">
           <p className={` ${timerStyle} w-[60px] h-[60px] lg:w-[89px] lg:h-[81px] text-center border-2 rounded-md pt-2 lg:py-5 px-1 lg:px-6 text-[32px] font-semibold`}>
-            {days.toString().length == 2 ? `${days}` : `0${days}`}
+            00
+            {/* {days.toString().length == 2 ? `${days}` : `${days}`} */}
           </p>{" "}
           <span className="py-3 text-base md:text-xl">Days </span>
         </div>
         <div className="flex flex-col content-center items-center">
           <p className={` ${timerStyle} w-[60px] h-[60px] lg:w-[89px] lg:h-[81px] text-center border-2 rounded-md pt-2 lg:py-5 px-1 lg:px-6 text-[32px] font-semibold`}>
-            {hours.toString().length == 2 ? `${hours} `: `0${hours}`}
+            00
+            {/* {hours.toString().length == 2 ? `${hours} `: `${hours}`} */}
           </p>
           <span className="py-3 text-base md:text-xl">Hours </span>
         </div>
         <div className="flex flex-col content-center items-center">
           <p className={` ${timerStyle} w-[60px] h-[60px] lg:w-[89px] lg:h-[81px] text-center border-2 rounded-md pt-2 lg:py-5 px-1 lg:px-6 text-[32px] font-semibold`}>
-            {minutes.toString().length == 2 ? `${minutes}` : `0${minutes}`}
+            00
+            {/* {minutes.toString().length == 2 ? `${minutes}` : `${minutes}`} */}
           </p>
           <span className="py-3 text-base md:text-xl ">Minutes </span>
         </div>
         <div className="flex flex-col content-center items-center">
-          <p  className={` ${timerStyle} w-[60px] h-[60px] lg:w-[89px] lg:h-[81px] text-center border-2 rounded-md pt-2 lg:py-5 px-1 lg:px-6 text-[32px] font-semibold`}>
-            {seconds.toString().length == 2 ? `${seconds}` : `0${seconds}`}
+          <p  className={` ${timerStyle}  w-[60px] h-[60px] lg:w-[89px] lg:h-[81px] text-center border-2 rounded-md pt-2 lg:py-5 px-1 lg:px-6 text-[32px] font-semibold`}>
+            00
+            {/* {seconds.toString().length == 2 ? `${seconds}` : `${seconds}`} */}
           </p>
           <span className="py-3 text-base md:text-xl">Seconds </span>
         </div>
