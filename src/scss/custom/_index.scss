@@ -1,0 +1,135 @@
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@use '../utils/function' as fn;
+@use '../global/colors' as colors;
+
+// 2. Include any default variable overrides here
+// $primary: #0266f4;
+$success: #457a10;
+// $secondary: #747474;
+$info: #b8dff2;
+$dark: #292D32;
+// $body-color: #979dad;
+$mute: #6c757d;
+$danger: #ff0000;
+// $light: #fff;
+// $myown: #000;
+
+// VARIABLES 
+
+$secondary: #E9F7EE;
+$primary: #2F40D5;
+
+
+$black: #000000;
+$text-white: #FFFFFF;
+$text-black: #292D32;
+
+
+
+$font-weight-lighter: lighter;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-bolder: 900;
+
+$theme-colors: (
+  'primary': $primary,
+  'success': $success,
+  'info': $info,
+  'dark': $dark,
+  'danger': $danger,
+  'muted': $mute,
+  'secondary': $secondary,
+//   'myown': $myown,
+);
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 1.5rem !default;
+$grid-row-columns: 6 !default;
+
+// Create your own map
+$custom-colors: (
+  'blue': #1f2666,
+  'cyan': #1c1d1d,
+  'grey': #4a5568,
+  'black': #000000,
+  'lightBlue': #0385ff,
+  'light-blue-ii': #dce9fa,
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+$container-max-widths: (
+  xl: 1148px,
+  xxl: 1248px,
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 375px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+$spacers: (
+  0: 0,
+  '0_5': 0.125rem,
+  1: 0.25rem,
+  '1_5': 0.375rem,
+  2: 0.5rem,
+  '2_5': 0.7rem,
+  3: 0.75rem,
+  '3_5': 0.875rem,
+  4: 1rem,
+  5: 1.25rem,
+  6: 1.5rem,
+  7: 1.75rem,
+  8: 2rem,
+  9: 2.25rem,
+  10: 2.5rem,
+  12: 3rem,
+  14: 3.5rem,
+  16: 4rem,
+  18: 4.5rem,
+  20: 5rem,
+  24: 6rem,
+  28: 7rem,
+  32: 8rem,
+  36: 9rem,
+  40: 10rem,
+  44: 11rem,
+  48: 12rem,
+  52: 13rem,
+  56: 14rem,
+  60: 15rem,
+  64: 16rem,
+  72: 18rem,
+  80: 20rem,
+  96: 24rem,
+);
+
+$font-sizes: (
+  xs: '0.75rem',
+  sm: '0.875rem',
+  md: '1rem',
+  lg: '1.125rem',
+  xl: '1.25rem',
+  '2xl': '1.5rem',
+  '3xl': '2rem',
+  '4xl': '2.75rem',
+  '5xl': '3rem',
+  '6xl': '3.75rem',
+  '7xl': '4.5rem',
+  '8xl': '6rem',
+  '9xl': '8rem',
+  '20': '20px',
+  '22': '22px',
+  '24': '24px',
+);
