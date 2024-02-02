@@ -14,7 +14,7 @@ const Footer = ({setOpen}) => {
           Join Dr. Emily Johnson for an Exclusive Session on [Key Topic]. Don't
           miss this opportunity to gain actionable knowledge,
         </p>
-        <button onClick={showModal} className="bg-white text-black p-3 font-semibold ">Register Now</button>
+        <button onClick={showModal} className="bg-white text-black p-3 font-semibold hover:text-red-500 transition duration-300 ease-in-out">Register Now</button>
       </div>
 
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">

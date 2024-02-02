@@ -6,13 +6,14 @@ const HeroSection = ({setOpen}) => {
     const timerStyle = "bg-black text-white"
     const counterHeading = " hidden"
   return (
-    <div id="home"   className="  grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-5 pt-14 lg:pt-24 pb-10 mt-16 w-11/12 mx-auto">
+    <div id="home"   className="  grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-5  pt-20 lg:pt-24 pb-10 mt-16 w-11/12 mx-auto">
       <div className=" text-center md:text-left flex flex-col items-center lg:items-start ">
         
         <span className="hidden lg:block bg-black rounded-full px-4 py-2 mb-3">
           <p className="text-white">UIAB Webinar</p>
         </span>
-        <h1 className="font-bold  text-[29px] md:text-[45px] lg:text-[34px] lg:leading-[50px] xl:text-[56px] text-center lg:text-start  leading-10 md:leading-[50px] xl:leading-[79.52px] ">
+        <h1 className="font-bold pt-5 lg:pt-0
+         text-[29px] md:text-[45px] lg:text-[34px] lg:leading-[50px] xl:text-[56px] text-center lg:text-start  leading-10 md:leading-[50px] xl:leading-[79.52px] ">
           Elevate Your Skills in  an Exclusive Webinar Experience
         </h1>
         <p className=" py-3 leading-8 text-center lg:text-start w-full ">

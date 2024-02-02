@@ -5,6 +5,7 @@ import ModalTimer from "../countdown/ModalTimer";
 import axios from "axios";
 import { useForm, Controller } from "react-hook-form";
 import { MdCancel } from "react-icons/md";
+import CountDownTimer from "../countdown/CountDownTimer";
 // import PhoneInput from "react-phone-number-input";
 // import SuccessModal from "../modal/SuccessModal";
 // import axios from axios
@@ -13,6 +14,7 @@ import { MdCancel } from "react-icons/md";
 const RegistrationForm = ({ isOpen, text, submitform, setInitalModalOpen }) => {
     const [open, setOpen] = useState(false);
     const cancelButtonRef = useRef(null);
+    const [loading, setLoading]= useState(false)
     const {
         control,
         handleSubmit,
@@ -22,6 +24,7 @@ const RegistrationForm = ({ isOpen, text, submitform, setInitalModalOpen }) => {
     } = useForm();
 
     // const [value, setValue] = useState("");
+    
 
     const onSubmit = async (data, e) => {
         e.preventDefault(); // Prevent default form submission behavior
@@ -32,6 +35,7 @@ const RegistrationForm = ({ isOpen, text, submitform, setInitalModalOpen }) => {
             console.log("Response data:", response.data);
 
             if (response.status === 201) {
+              setLoading(false)
                 reset();
                 console.log("User created successfully:", response.data.user);
                 setOpen(true);
@@ -114,7 +118,7 @@ const RegistrationForm = ({ isOpen, text, submitform, setInitalModalOpen }) => {
                     className=' my-3 px-2 block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6 outline-none'
                 />
                 {errors.email && <p className='text-red-500 text-[14px]'>{errors.email.message}</p>}
-                <button type='submit' style={{ background: "#2F40D5", boxShadow: "5px 5px black" }} className='text-white p-3 my-2'>
+                <button type='submit' style={{ background: "#2F40D5", boxShadow: "5px 5px black" }} className='text-white p-3 my-2 hover:text-red-500 transition duration-300 ease-in-out'>
                     Register Now
                 </button>
             </form>
@@ -160,9 +164,11 @@ const RegistrationForm = ({ isOpen, text, submitform, setInitalModalOpen }) => {
                                             Congratulations!!! You’re on your way to building the next academy empire. One more thing, I need you to join fellow
                                             enthusiasts like yourself in an exclusive WhatsApp group.
                                         </p>
+                                        
                                         <button
                                             onClick={() => {
                                                 setInitalModalOpen(false);
+                                                setLoading(true)
                                             }}
                                             style={{
                                                 background: "#2F40D5",
