@@ -118,8 +118,12 @@ const RegistrationForm = ({ isOpen, text, submitform, setInitalModalOpen }) => {
                     className=' my-3 px-2 block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6 outline-none'
                 />
                 {errors.email && <p className='text-red-500 text-[14px]'>{errors.email.message}</p>}
-                <button type='submit' style={{ background: "#2F40D5", boxShadow: "5px 5px black" }} className='text-white p-3 my-2 hover:text-red-500 transition duration-300 ease-in-out'>
-                    Register Now
+                <button 
+                 onClick={() => {
+                  setLoading(true)
+              }}
+                type='submit' style={{ background: "#2F40D5", boxShadow: "5px 5px black" }} className='text-white p-3 my-2 hover:text-red-500 transition duration-300 ease-in-out'>
+                    {loading? 'loading..' : 'Register Now'}
                 </button>
             </form>
             <Transition.Root show={open} as={Fragment}>
@@ -147,7 +151,7 @@ const RegistrationForm = ({ isOpen, text, submitform, setInitalModalOpen }) => {
                                 leaveFrom='opacity-100 translate-y-0 sm:scale-100'
                                 leaveTo='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'
                             >
-                                <Dialog.Panel className='relative  top-1 md:top-10  transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg'>
+                                <Dialog.Panel className='relative  top-14 md:top-10  transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg'>
                                     <div className={`flex justify-end p-6`}>
                                         <MdCancel
                                             fontSize={`2rem`}
@@ -165,10 +169,10 @@ const RegistrationForm = ({ isOpen, text, submitform, setInitalModalOpen }) => {
                                             enthusiasts like yourself in an exclusive WhatsApp group.
                                         </p>
                                         
-                                        {/* <button
+                                        <button
                                             onClick={() => {
                                                 setInitalModalOpen(false);
-                                                setLoading(true)
+                                              
                                             }}
                                             style={{
                                                 background: "#2F40D5",
@@ -177,17 +181,7 @@ const RegistrationForm = ({ isOpen, text, submitform, setInitalModalOpen }) => {
                                             className='w-full text-white p-3 font-bold'
                                         >
                                             Join Whatsapp Community
-                                        </button> */}
-                                        <button 
-                                         onClick={() => {
-                                          setInitalModalOpen(false);
-                                          setLoading(true)
-                                      }}
-                                        className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]" role="status">
-      <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
-        {loading? 'please wait...' : 'Join Whatsapp community'}
-      </span>
-    </button>
+                                        </button>
                                         <ModalTimer />
                                     </div>
                                 </Dialog.Panel>
