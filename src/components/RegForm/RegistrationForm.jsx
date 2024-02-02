@@ -165,7 +165,7 @@ const RegistrationForm = ({ isOpen, text, submitform, setInitalModalOpen }) => {
                                             enthusiasts like yourself in an exclusive WhatsApp group.
                                         </p>
                                         
-                                        <button
+                                        {/* <button
                                             onClick={() => {
                                                 setInitalModalOpen(false);
                                                 setLoading(true)
@@ -177,7 +177,17 @@ const RegistrationForm = ({ isOpen, text, submitform, setInitalModalOpen }) => {
                                             className='w-full text-white p-3 font-bold'
                                         >
                                             Join Whatsapp Community
-                                        </button>
+                                        </button> */}
+                                        <button 
+                                         onClick={() => {
+                                          setInitalModalOpen(false);
+                                          setLoading(true)
+                                      }}
+                                        className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]" role="status">
+      <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
+        {loading? 'please wait...' : 'Join Whatsapp community'}
+      </span>
+    </button>
                                         <ModalTimer />
                                     </div>
                                 </Dialog.Panel>
