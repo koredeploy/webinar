@@ -31,7 +31,7 @@ const ModalTimer = ({ timerStyle, heading }) => {
   return (
     <div className="py-3  ">
       <h2
-        className={` ${heading} font-bold text-lg py-1 text-center lg:text-start`}
+        className={` ${heading} font-bold text-lg py-1 text-center text-center`}
       >
         Webinar starts in:
       </h2>

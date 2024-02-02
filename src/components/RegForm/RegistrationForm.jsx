@@ -1,6 +1,5 @@
 import { Fragment, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import animation from "../../assets/Animation - 1706197735539.json";
 import ModalTimer from "../countdown/ModalTimer";
 import axios from "axios";
 import { useForm, Controller } from "react-hook-form";
@@ -140,7 +139,7 @@ const RegistrationForm = ({ isOpen, text, submitform, setInitalModalOpen }) => {
                         <div className='fixed inset-0 bbg-opacity-75 transition-opacity' />
                     </Transition.Child>
 
-                    <div className='fixed inset-0 z-10 w-screen overflow-y-auto'>
+                    <div className='fixed inset-0 z-30 w-screen overflow-y-auto'>
                         <div className='flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0'>
                             <Transition.Child
                                 as={Fragment}
@@ -151,20 +150,20 @@ const RegistrationForm = ({ isOpen, text, submitform, setInitalModalOpen }) => {
                                 leaveFrom='opacity-100 translate-y-0 sm:scale-100'
                                 leaveTo='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'
                             >
-                                <Dialog.Panel className='relative  top-14 md:top-10  transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg'>
-                                    <div className={`flex justify-end p-6`}>
+                                <Dialog.Panel className='relative  top-3 md:top-3  transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-2xl '>
+                                    <div className={`flex justify-end p-4`}>
                                         <MdCancel
-                                            fontSize={`2rem`}
+                                            fontSize={`1.8rem`}
                                             onClick={() => {
                                                 setInitalModalOpen(false);
                                             }}
                                         />
                                     </div>
 
-                                    <div className='bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4 flex flex-col justify-center text-center gap-5'>
-                                        <img src={animation} alt='' />
+                                    <div className='bg-white px-4 pb-4  sm:px-10 sm:pb-4 flex flex-col justify-center text-center gap-3'>
+                                        <img className="w-2/6 mx-auto" src="https://res.cloudinary.com/doejcrfso/image/upload/v1706862573/webinar-project/Tick_ydczsa.gif" alt='' />
                                         <h1 className='text-2xl font-bold'>Registration Successfull</h1>
-                                        <p className='text-[18px]'>
+                                        <p className='text-[14px] md:text[18px]'>
                                             Congratulations!!! You’re on your way to building the next academy empire. One more thing, I need you to join fellow
                                             enthusiasts like yourself in an exclusive WhatsApp group.
                                         </p>
