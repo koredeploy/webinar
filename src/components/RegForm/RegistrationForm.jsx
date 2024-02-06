@@ -4,13 +4,15 @@ import ModalTimer from "../countdown/ModalTimer";
 import axios from "axios";
 import { useForm, Controller } from "react-hook-form";
 import { MdCancel } from "react-icons/md";
+
 import CountDownTimer from "../countdown/CountDownTimer";
+import Spinner from "../loadingState/Spinner";
 // import PhoneInput from "react-phone-number-input";
 // import SuccessModal from "../modal/SuccessModal";
 // import axios from axios
 
 // eslint-disable-next-line react/prop-types
-const RegistrationForm = ({ isOpen, text, submitform, setInitalModalOpen }) => {
+const RegistrationForm = ({ isOpen, setInitalModalOpen }) => {
     const [open, setOpen] = useState(false);
     const cancelButtonRef = useRef(null);
     const [loading, setLoading]= useState(false)
@@ -44,17 +46,17 @@ const RegistrationForm = ({ isOpen, text, submitform, setInitalModalOpen }) => {
         }
     };
 
-    const formBorder = isOpen ? "0px " : "5px solid black ";
+    const border = !isOpen ? " 5px solid black " : " 0px ";
 
     return (
         <div>
             <form
                 onSubmit={handleSubmit(onSubmit)}
-                className={` ${formBorder} bg-white flex flex-col py-6 lg:py-10 px-10 rounded-xl `}
-                style={{ boxShadow: " 10px 10px black" }}
+                className={` ${border} bg-white flex flex-col py-6 lg:py-10 px-10 rounded-xl  `}
+                style={{ boxShadow: " 10px 10px black", }}
             >
                 <h2 className='font-bold py-5'>Registration Form</h2>
-                <div className='grid grid-cols-2 gap-5'>
+                <div className=' grid grid-cols-1  lg:grid-cols-2 gap-3 md:gap-5'>
                     <div>
                         <label htmlFor='firstname'> First Name </label>
                         <input
@@ -63,7 +65,7 @@ const RegistrationForm = ({ isOpen, text, submitform, setInitalModalOpen }) => {
                                 required: "This field is required",
                             })}
                             placeholder='First Name'
-                            className='my-3 px-2 block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6 outline-none'
+                            className=' px-2 block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6 outline-none'
                         />
                         {errors.firstName && <p className='text-red-500 text-[14px]'>{errors.firstName.message}</p>}
                     </div>
@@ -78,7 +80,7 @@ const RegistrationForm = ({ isOpen, text, submitform, setInitalModalOpen }) => {
                                 required: "This field is required",
                             })}
                             placeholder='Last Name'
-                            className=' my-3 px-2 block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6 outline-none'
+                            className='  px-2 block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6 outline-none'
                         />
                         {errors.lastName && <p className='text-red-500 text-[14px] '>{errors.lastName.message}</p>}
                     </div>
@@ -92,7 +94,7 @@ const RegistrationForm = ({ isOpen, text, submitform, setInitalModalOpen }) => {
                             {...field}
                             type='text'
                             placeholder='Enter phone number'
-                            className='flex items-center my-3 px-2 py-3 w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 leading-6 md:leading-8 outline-none'
+                            className='flex items-center  px-2 py-3 w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 leading-6 md:leading-8 outline-none'
                         />
                     )}
                     control={control}
@@ -114,7 +116,7 @@ const RegistrationForm = ({ isOpen, text, submitform, setInitalModalOpen }) => {
                         },
                     })}
                     placeholder='johndoe@gmail.com'
-                    className=' my-3 px-2 block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6 outline-none'
+                    className=' px-2 block w-full rounded-md border-0 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6 outline-none'
                 />
                 {errors.email && <p className='text-red-500 text-[14px]'>{errors.email.message}</p>}
                 <button 
@@ -122,8 +124,9 @@ const RegistrationForm = ({ isOpen, text, submitform, setInitalModalOpen }) => {
                   setLoading(true)
               }}
                 type='submit' style={{ background: "#2F40D5", boxShadow: "5px 5px black" }} className='text-white p-3 my-2 hover:text-red-500 transition duration-300 ease-in-out'>
-                    {loading? 'loading..' : 'Register Now'}
+                    {loading? <Spinner/> : 'Register Now'}
                 </button>
+                
             </form>
             <Transition.Root show={open} as={Fragment}>
                 <Dialog as='div' className='relative z-10' initialFocus={cancelButtonRef} onClose={setOpen}>

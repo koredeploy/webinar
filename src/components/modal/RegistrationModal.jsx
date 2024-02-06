@@ -43,7 +43,7 @@ export default function RegistrationModal({ open, setOpen }) {
                                 leaveFrom='opacity-100 translate-y-0 sm:scale-100'
                                 leaveTo='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'
                             >
-                                <Dialog.Panel className='relative  -top-28 md:top-10  transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg'>
+                                <Dialog.Panel className='relative  -top-20 md:top-10 w-full transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg'>
                                     <RegistrationForm setInitalModalOpen={setOpen} isOpen={open} text={submitText} />
                                 </Dialog.Panel>
                             </Transition.Child>

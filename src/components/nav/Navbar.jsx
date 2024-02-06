@@ -12,7 +12,7 @@ const Navbar = ({ setOpen }) => {
 
     return (
         <div className='w-full max-w-screen-4xl py-10 fixed -top-1 shadow-md z-10' style={{ backgroundColor: "#E9F7EE" }}>
-            <header className=' flex lg:flex-row flex-col justify-between lg:items-center gap-10 w-11/12 mx-auto ' style={{ maxWidth: "1440px" }}>
+            <header className=' flex lg:flex-row flex-col justify-between lg:items-center gap-10 w-11/12 mx-auto ' style={{ maxWidth: "1600px" }}>
                 <div className='flex justify-between items-center'>
                     <span>
                         <img src='https://res.cloudinary.com/doejcrfso/image/upload/v1706694793/webinar-project/Webinar_qmnyis.png' alt='' className='w-full' />
