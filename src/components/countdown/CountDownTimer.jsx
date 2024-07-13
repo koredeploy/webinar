@@ -49,7 +49,7 @@ import { useEffect, useState } from "react";
 // eslint-disable-next-line react/prop-types
 const CountDownTimer = ({ timerStyle, heading }) => {
     const calculateTimeRemaining = useCallback(() => {
-        const deadline = new Date("2024-02-21T22:52:00Z"); // Updated format for better compatibility
+        const deadline = new Date("2024-09-21T22:52:00Z"); // Updated format for better compatibility
         const currentTime = new Date();
 
         let date = deadline - currentTime;
